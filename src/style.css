@@ -107,9 +107,18 @@ body {
   display: flex;
   flex-direction: row;
   margin-left: 5rem;
+  height: 100%;
+  margin-bottom: 2rem;
 }
 
 .atributs {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 10rem;
+  width: fit-content;
 }
 .skill {
   margin-left: 5rem;
@@ -134,4 +143,16 @@ body {
   margin-top: 4rem;
   height: 80vh;
   overflow: auto;
+}
+
+.skill-btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5px;
+}
+.skill-btn {
+  width: 20px;
+  height: 12px;
+  margin-bottom: 1px;
 }

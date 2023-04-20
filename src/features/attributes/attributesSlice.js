@@ -1,58 +1,80 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  Siła: 3,
-  Zręczność: 3,
-  Kondycja: 3,
-  Inteligencja: 3,
-  Mądrość: 3,
-  Charyzma: 3,
-  Total: 10,
+  Strength: 3,
+  Dexterity: 3,
+  Constitution: 3,
+  Intelligence: 3,
+  Wisdom: 3,
+  Charisma: 3,
+  AttributesTotal: 10,
 };
 
 export const attributesSlice = createSlice({
   name: 'attributes',
   initialState,
   reducers: {
-    addSila: (state) => {
-      state.Siła += 1;
-      state.Total = state.Total - (state.Siła - 3);
+    addStrength: (state) => {
+      state.Strength += 1;
+      state.AttributesTotal = state.AttributesTotal - (state.Strength - 3);
     },
-    decSila: (state) => {
-      if (state.Siła > 3) {
-        state.Total = state.Total + (state.Siła - 3);
-        state.Siła -= 1;
+    decStrength: (state) => {
+      if (state.Strength > 3) {
+        state.AttributesTotal = state.AttributesTotal + (state.Strength - 3);
+        state.Strength -= 1;
       }
     },
-    addZrecznosc: (state) => {
-      state.Zręczność += 1;
+    addDexterity: (state) => {
+      state.Dexterity += 1;
+      state.AttributesTotal = state.AttributesTotal - (state.Dexterity - 3);
     },
-    decZrecznosc: (state) => {
-      state.Zręczność -= 1;
+    decDexterity: (state) => {
+      if (state.Dexterity > 3) {
+        state.AttributesTotal = state.AttributesTotal + (state.Dexterity - 3);
+        state.Dexterity -= 1;
+      }
     },
-    addKondycja: (state) => {
-      state.Kondycja += 1;
+    addConstitution: (state) => {
+      state.Constitution += 1;
+      state.AttributesTotal = state.AttributesTotal - (state.Constitution - 3);
     },
-    decKondycja: (state) => {
-      state.Kondycja -= 1;
+    decConstitution: (state) => {
+      if (state.Constitution > 3) {
+        state.AttributesTotal =
+          state.AttributesTotal + (state.Constitution - 3);
+        state.Constitution -= 1;
+      }
     },
-    addInteligencja: (state) => {
-      state.Inteligencja += 1;
+    addIntelligence: (state) => {
+      state.Intelligence += 1;
+      state.AttributesTotal = state.AttributesTotal - (state.Intelligence - 3);
     },
-    decInteligencja: (state) => {
-      state.Inteligencja -= 1;
+    decIntelligence: (state) => {
+      if (state.Intelligence > 3) {
+        state.AttributesTotal =
+          state.AttributesTotal + (state.Intelligence - 3);
+        state.Intelligence -= 1;
+      }
     },
-    addMadrosc: (state) => {
-      state.Mądrość += 1;
+    addWisdom: (state) => {
+      state.Wisdom += 1;
+      state.AttributesTotal = state.AttributesTotal - (state.Wisdom - 3);
     },
-    decMadrosc: (state) => {
-      state.Mądrość -= 1;
+    decWisdom: (state) => {
+      if (state.Wisdom > 3) {
+        state.AttributesTotal = state.AttributesTotal + (state.Wisdom - 3);
+        state.Wisdom -= 1;
+      }
     },
-    addCharyzma: (state) => {
-      state.Charyzma += 1;
+    addCharisma: (state) => {
+      state.Charisma += 1;
+      state.AttributesTotal = state.AttributesTotal - (state.Charisma - 3);
     },
-    decCharyzma: (state) => {
-      state.Charyzma -= 1;
+    decCharisma: (state) => {
+      if (state.Charisma > 3) {
+        state.AttributesTotal = state.AttributesTotal + (state.Charisma - 3);
+        state.Charisma -= 1;
+      }
     },
     incrementByAmount: (state, action) => {
       state.value += action.payload;
@@ -61,18 +83,18 @@ export const attributesSlice = createSlice({
 });
 
 export const {
-  addSila,
-  decSila,
-  addZrecznosc,
-  decZrecznosc,
-  addKondycja,
-  decKondycaj,
-  addInteligencja,
-  decInteligencja,
-  addMadrosc,
-  decMadrosc,
-  addCharyzma,
-  decCharyzma,
+  addCharisma,
+  addConstitution,
+  addDexterity,
+  addIntelligence,
+  addStrength,
+  addWisdom,
+  decCharisma,
+  decConstitution,
+  decDexterity,
+  decIntelligence,
+  decStrength,
+  decWisdom,
   incrementByAmount,
 } = attributesSlice.actions;
 
