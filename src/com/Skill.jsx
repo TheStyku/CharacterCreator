@@ -16,8 +16,8 @@ function Skill(props) {
         {props.text} {props.value}
       </p>
       <div className="skill-btn-group ">
-        <button className="skill-btn " onClick={Add}></button>
-        <button className="skill-btn " onClick={Dec}></button>
+        <button className="skill-btn-up" onClick={Add}></button>
+        <button className="skill-btn-down " onClick={Dec}></button>
       </div>
     </div>
   );

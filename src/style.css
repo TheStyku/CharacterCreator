@@ -151,8 +151,28 @@ body {
   align-items: center;
   margin-left: 5px;
 }
-.skill-btn {
-  width: 20px;
-  height: 12px;
+.skill-btn-up {
+  width: 0;
+  height: 0;
+  border-width: 0 7.5px 10px 7.5px;
+  border-color: transparent transparent #ffffff transparent;
+  border-style: solid;
+  background: border-box;
   margin-bottom: 1px;
+}
+.skill-btn-down {
+  width: 0;
+  height: 0;
+  border-width: 10px 7.5px 0 7.5px;
+  border-color: #ffffff transparent transparent transparent;
+  border-style: solid;
+  background: border-box;
+}
+
+.next {
+  -webkit-transform: rotate(135deg);
+  margin: 50px 20px;
+  width: 50px;
+  height: 50px;
+  float: left;
 }
